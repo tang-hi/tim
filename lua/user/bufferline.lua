@@ -9,6 +9,7 @@ local M = {
     },
   },
 }
+
 function M.config()
   require("bufferline").setup {
     options = {
@@ -16,6 +17,9 @@ function M.config()
       right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
       offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
       separator_style = "thin",            -- | "thick" | "thin" | { 'any', 'any' },
+      show_tab_indicators = true,
+      persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
+      buffer_close_icon = '',
     },
     highlights = {
       fill = {
